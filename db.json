@@ -1,0 +1,171 @@
+{
+  "data": [
+    {
+      "": "--------------------------------------------------------------------------------------------------------------------------------------",
+      "pose_id": 3,
+      "pose_name": "00:07秒: Get a Slim Body in 30 min  - Standing Full body Workout  No Jumping, No Squat, No Lunge: ",
+      "model_type": 1,
+      "check_correct_interval": 3000,
+      "correct_pose": [
+        {
+          "": "每隔一段時間，人物即時曾經補抓過中的最大最小值，值比對正確性(高低)",
+          "to_compare_timing": "13.y.min",
+          "valid_joint_swipe_range": {"length_scale": "11-13:y:1"},
+          "correct_conditions": [
+            {
+              "compare_type": 1,
+              "to_compare_candidates": [
+                {"indicator":  11, "value_string": "y"},
+                {"indicator": 13, "value_string": "y"}
+              ],
+              "check_operator": {
+                "": " 204: '+-'(+-誤差); 203:'>'(大於); 204:'<'(小於); 205:'=='(等於); 206:'~'(表示範圍)",
+                "indicator": 203,
+                "value_string": "ud"
+              },
+              "correct_value": {
+                "": " 102: 除以，101: 乘以。 身體的某長度(目前是肩膀->髖關節)當作正確值，value_float則是要對長度做多少的運算",
+                "length_scale": "11-13:y:0.3"
+              },
+              "tip_id": "右手肘往後拉伸時要比肩膀高",
+              "error_tips": [
+                {
+                  "": "1 語音",
+                  "type": 1,
+                  "content": "右手肘往後拉伸時要比肩膀高"
+                },
+                {
+                  "": "2 紅線標示哪個關節連結錯誤",
+                  "type": 2,
+                  "content": "11,13,15"
+                },
+                {
+                  "": "3 顯示提示圖的座標(已偵測到峰值)，當再次接近時，會顯示提示圖，可指定在哪個關節點顯示甚麼圖。   ps.不需要事先填入，真正的值是運行的時候放入",
+                  "type": 3,
+                  "joint_id": 13,
+                  "icon": "0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "to_compare_timing": "14.y.min",
+          "valid_joint_swipe_range": {"length_scale": "11-13:y:1"},
+          "correct_conditions": [
+            {
+              "compare_type": 1,
+              "to_compare_candidates": [
+                {"indicator": 12, "value_string": "y"},
+                {"indicator": 14, "value_string": "y"}
+              ],
+              "check_operator": {
+                "indicator": 203,
+                "value_string": "ud"
+              },
+              "correct_value": { "length_scale": "11-13:y:0.3" },
+              "error_tips": [
+                {
+                  "type": 1,
+                  "content": "左手肘往後拉伸時要比肩膀高"
+                },
+                {
+                  "type": 2,
+                  "content": "12,14,16"
+                },
+                {
+                  "type": 3,
+                  "joint_id": 14,
+                  "icon": "0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "to_compare_timing": "25.y.min",
+          "valid_joint_swipe_range": {"length_scale": "11-23:y:0.3"},
+          "correct_conditions": [
+            {
+              "compare_type": 1,
+              "to_compare_candidates": [
+                {"indicator": 23, "value_string": "y"},
+                {"indicator": 25, "value_string": "y"}
+              ],
+              "check_operator": {
+                "indicator": 203,
+                "value_string": "ud"
+              },
+              "correct_value": { "length_scale": "11-23:y:0.3" },
+              "error_tips": [
+                {
+                  "type": 1,
+                  "content": "右膝蓋抬更高一點"
+                },
+                {
+                  "type": 2,
+                  "content": "23,25,27"
+                },
+                {
+                  "type": 3,
+                  "joint_id": 25,
+                  "icon": "315"
+                }
+              ]
+            },
+            {
+              "compare_type": 1,
+              "to_compare_candidates": [
+                {"indicator": 25},
+                {"indicator": 14}
+              ],
+              "check_operator": {
+                "indicator": 207
+              },
+              "correct_value": { "length_scale": "11-23:y:0.2" },
+              "error_tips": [
+                {
+                  "type": 1,
+                  "content": "左手肘要接近右膝蓋一點"
+                },
+                {
+                  "type": 2,
+                  "content": "12,14,16"
+                },
+                {
+                  "type": 2,
+                  "content": "25,27"
+                },
+                {
+                  "type": 3,
+                  "joint_id": 25,
+                  "icon": "315"
+                },
+                {
+                  "type": 3,
+                  "joint_id": 14,
+                  "icon": "135"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "coordination_checks": [
+        {
+          "target_joint": {
+            "full_id": "13.x.min",
+            "id": 13,
+            "axis": "x",
+            "extreme": "min"
+          },
+          "compare_conditions_and": [
+            {"full_id": "26.y.min", "id": 26, "axis": "y", "extreme": "min"}
+          ],
+          "compare_conditions_or": [],
+          "tip_id": "手肘往前滑動到最低時，膝蓋要抬到最高點"
+        }
+      ]
+    } 
+  ]
+}
